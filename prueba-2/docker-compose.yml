@@ -1,0 +1,40 @@
+version: '3.8'
+
+include:
+  - ./backend/docker-compose.yml
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    container_name: django_app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+    entrypoint: ["/app/entrypoint.sh"]
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    container_name: react_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/app
+
+volumes:
+  postgres_data:
+  static:
+  media:
+
