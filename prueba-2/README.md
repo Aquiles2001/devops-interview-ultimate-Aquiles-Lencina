@@ -35,6 +35,11 @@ Para el despliegue en la nube (AWS) se utilizo la herramienta terraform, para el
 Para poder desplegar la aplicación en un entorno en la nube, debe ejecutar los siguientes comandos dentro de la carpeta `prueba-2/deploy`:
 
 ```bash
+terraform init
 terraform plan -out plan.out
 terraform apply plan.out
+```
+
+```bash
+NOTA tener configurado previamente AWS-cli en tu local.
 ```
