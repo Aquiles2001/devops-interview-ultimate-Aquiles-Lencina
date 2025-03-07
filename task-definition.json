@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:703671933380:task-definition/service-nginx:3",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:703671933380:task-definition/service-nginx:4",
     "containerDefinitions": [
         {
             "name": "cluster-nginx",
-            "image": "703671933380.dkr.ecr.us-east-1.amazonaws.com/cluster-nginx:8a81f7c85cc3961ad18b15bf4c5fc32f73a34c1c",
+            "image": "703671933380.dkr.ecr.us-east-1.amazonaws.com/cluster-nginx:7e48527672eda2ff4f4796124d276f08c0b36419",
             "cpu": 0,
             "portMappings": [
                 {
@@ -35,7 +35,7 @@
     "family": "service-nginx",
     "executionRoleArn": "arn:aws:iam::703671933380:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 3,
+    "revision": 4,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -81,7 +81,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-03-07T01:23:44.479Z",
+    "registeredAt": "2025-03-07T01:44:56.397Z",
     "registeredBy": "arn:aws:iam::703671933380:user/Aquiles",
     "tags": []
 }
