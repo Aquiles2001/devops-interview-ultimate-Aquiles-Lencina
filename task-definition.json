@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:703671933380:task-definition/service-nginx:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:703671933380:task-definition/service-nginx:3",
     "containerDefinitions": [
         {
             "name": "cluster-nginx",
-            "image": "703671933380.dkr.ecr.us-east-1.amazonaws.com/cluster-nginx",
+            "image": "703671933380.dkr.ecr.us-east-1.amazonaws.com/cluster-nginx:8a81f7c85cc3961ad18b15bf4c5fc32f73a34c1c",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -29,8 +27,7 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             },
             "systemControls": []
         }
@@ -38,7 +35,7 @@
     "family": "service-nginx",
     "executionRoleArn": "arn:aws:iam::703671933380:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -84,7 +81,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-03-06T20:25:58.220Z",
+    "registeredAt": "2025-03-07T01:23:44.479Z",
     "registeredBy": "arn:aws:iam::703671933380:user/Aquiles",
     "tags": []
 }
