@@ -86,6 +86,5 @@
     },
     "registeredAt": "2025-03-06T20:25:58.220Z",
     "registeredBy": "arn:aws:iam::703671933380:user/Aquiles",
-    "enableFaultInjection": false,
     "tags": []
 }
